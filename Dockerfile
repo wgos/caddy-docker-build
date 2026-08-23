@@ -1,11 +1,11 @@
-ARG CADDY_VERSION=2.10
+ARG CADDY_VERSION=2.11
 FROM caddy:${CADDY_VERSION}-builder AS builder
 
 RUN xcaddy build \
     --with github.com/lucaslorentz/caddy-docker-proxy/v2 \
     --with github.com/caddy-dns/cloudflare \
     --with github.com/mholt/caddy-dynamicdns \
-    --with github.com/mholt/caddy-l4@4d3c80e89c5f80438a3e048a410d5543ff5fb9f4 \
+    --with github.com/mholt/caddy-l4 \
     --with github.com/fvbommel/caddy-combine-ip-ranges \
     --with github.com/WeidiDeng/caddy-cloudflare-ip
 
