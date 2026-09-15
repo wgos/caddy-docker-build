@@ -8,7 +8,7 @@ RUN xcaddy build \
     --with github.com/mholt/caddy-l4 \
     --with github.com/fvbommel/caddy-combine-ip-ranges \
     --with github.com/WeidiDeng/caddy-cloudflare-ip \
-    --with github.com/porech/caddy-maxmind-geolocation
+    --with github.com/oltdaniel/caddy-ipinfo-free
 
 FROM caddy:${CADDY_VERSION}-alpine
 
